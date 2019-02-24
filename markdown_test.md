@@ -11,18 +11,18 @@ hoge
 
 `hoge`
     hoge
-	hoge
-	hoge
+    hoge
+    hoge
 
 * hoge
-	* piyo
+    * piyo
 * hoge
-	* piyo
+    * piyo
 
 1. hoge
-	1. piyo
+    1. piyo
 2. hoge
-	2. piyo
+    2. piyo
 
 # hoge
 ## hoge
@@ -36,7 +36,7 @@ hoge
 hoge"
 > hoge
 
-<http://google.com/>
+<http://google.com/>  
 [google][google_URL]
 
-[google]: http://google.comet 
+[google]: http://google.comet

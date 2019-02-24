@@ -6,13 +6,13 @@ hoge
 hoge
 
 ---
-*hoge*
-**hoge**
+*hoge*  
+**hoge**  
 
-`hoge`
-    hoge
-    hoge
-    hoge
+`hoge`  
+    hoge  
+    hoge  
+    hoge  
 
 * hoge
     * piyo
@@ -31,12 +31,12 @@ hoge
 ##### hoge
 ###### hoge
 
-> hoge
-> "hoge
-hoge"
+> hoge  
+> "hoge  
+hoge"  
 > hoge
 
 <http://google.com/>  
-[google][google_URL]
+[google][google]
 
 [google]: http://google.comet

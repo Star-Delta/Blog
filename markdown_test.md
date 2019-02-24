@@ -1,6 +1,5 @@
 ﻿hoge
 hoge
-
 ---
 hoge  
 hoge
@@ -22,7 +21,7 @@ hoge
 1. hoge
     1. piyo
 2. hoge
-    2. piyo
+    1. piyo
 
 # hoge
 ## hoge

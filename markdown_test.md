@@ -15,6 +15,10 @@
 
 * list
     * hoge
+* list
+    * hoge
+1. list
+    1. hoge
 1. list
     1. hoge
 

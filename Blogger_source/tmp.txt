@@ -1,0 +1,114 @@
+star-delta@DESKTOP-5QV72KT:~$ apt list openssh-server
+Listing... Done
+openssh-server/kali-rolling 1:7.9p1-10 amd64
+star-delta@DESKTOP-5QV72KT:~$ apt show openssh-server
+Package: openssh-server
+Version: 1:7.9p1-10
+Priority: optional
+Section: net
+Source: openssh
+Maintainer: Debian OpenSSH Maintainers <debian-ssh@lists.debian.org>
+Installed-Size: 1,484 kB
+Provides: ssh-server
+Depends: adduser (>= 3.9), dpkg (>= 1.9.0), libpam-modules (>= 0.72-9), libpam-runtime (>= 0.76-14), lsb-base (>= 4.1+Debian3), openssh-client (= 1:7.9p1-10), openssh-sftp-server, procps, ucf (>= 0.28), debconf (>= 0.5) | debconf-2.0, libaudit1 (>= 1:2.2.1), libc6 (>= 2.26), libcom-err2 (>= 1.43.9), libgssapi-krb5-2 (>= 1.17), libkrb5-3 (>= 1.13~alpha1+dfsg), libpam0g (>= 0.99.7.1), libselinux1 (>= 1.32), libssl1.1 (>= 1.1.1), libsystemd0, libwrap0 (>= 7.6-4~), zlib1g (>= 1:1.1.4)
+Recommends: default-logind | logind | libpam-systemd, ncurses-term, xauth
+Suggests: molly-guard, monkeysphere, rssh, ssh-askpass, ufw
+Conflicts: sftp, ssh-socks, ssh2
+Replaces: openssh-client (<< 1:7.9p1-8), ssh, ssh-krb5
+Homepage: http://www.openssh.com/
+Tag: admin::login, implemented-in::c, interface::daemon, network::server,
+ protocol::ssh, role::program, security::authentication,
+ security::cryptography, use::login, use::transmission
+Download-Size: 352 kB
+APT-Sources: http://http.kali.org/kali kali-rolling/main amd64 Packages
+Description: secure shell (SSH) server, for secure access from remote machines
+ This is the portable version of OpenSSH, a free implementation of
+ the Secure Shell protocol as specified by the IETF secsh working
+ group.
+ .
+ Ssh (Secure Shell) is a program for logging into a remote machine
+ and for executing commands on a remote machine.
+ It provides secure encrypted communications between two untrusted
+ hosts over an insecure network. X11 connections and arbitrary TCP/IP
+ ports can also be forwarded over the secure channel.
+ It can be used to provide applications with a secure communication
+ channel.
+ .
+ This package provides the sshd server.
+ .
+ In some countries it may be illegal to use any encryption at all
+ without a special permit.
+ .
+ sshd replaces the insecure rshd program, which is obsolete for most
+ purposes.
+
+star-delta@DESKTOP-5QV72KT:~$ sudo apt install openssh-server
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libblas3 libdns169 libgfortran5 libisc166 liblinear3 libquadmath0 nmap-common
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  ncurses-base ncurses-term openssh-sftp-server
+Suggested packages:
+  molly-guard monkeysphere rssh ssh-askpass ufw
+The following NEW packages will be installed:
+  ncurses-term openssh-server openssh-sftp-server
+The following packages will be upgraded:
+  ncurses-base
+1 upgraded, 3 newly installed, 0 to remove and 930 not upgraded.
+Need to get 1,145 kB of archives.
+After this operation, 5,887 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ftp-srv2.kddilabs.jp/Linux/packages/kali/kali kali-rolling/main amd64 ncurses-base all 6.1+2
+0181013-2 [258 kB]
+Get:2 http://ftp-srv2.kddilabs.jp/Linux/packages/kali/kali kali-rolling/main amd64 ncurses-term all 6.1+2
+0181013-2 [490 kB]
+Get:3 http://ftp-srv2.kddilabs.jp/Linux/packages/kali/kali kali-rolling/main amd64 openssh-sftp-server am
+d64 1:7.9p1-10 [44.6 kB]
+Get:4 http://ftp-srv2.kddilabs.jp/Linux/packages/kali/kali kali-rolling/main amd64 openssh-server amd64 1
+:7.9p1-10 [352 kB]
+Fetched 1,145 kB in 9s (129 kB/s)
+Preconfiguring packages ...
+(Reading database ... 138850 files and directories currently installed.)
+Preparing to unpack .../ncurses-base_6.1+20181013-2_all.deb ...
+Unpacking ncurses-base (6.1+20181013-2) over (6.1-1) ...
+Setting up ncurses-base (6.1+20181013-2) ...
+Selecting previously unselected package ncurses-term.
+(Reading database ... 138852 files and directories currently installed.)
+Preparing to unpack .../ncurses-term_6.1+20181013-2_all.deb ...
+Unpacking ncurses-term (6.1+20181013-2) ...
+Selecting previously unselected package openssh-sftp-server.
+Preparing to unpack .../openssh-sftp-server_1%3a7.9p1-10_amd64.deb ...
+Unpacking openssh-sftp-server (1:7.9p1-10) ...
+Selecting previously unselected package openssh-server.
+Preparing to unpack .../openssh-server_1%3a7.9p1-10_amd64.deb ...
+Unpacking openssh-server (1:7.9p1-10) ...
+Setting up ncurses-term (6.1+20181013-2) ...
+Setting up openssh-sftp-server (1:7.9p1-10) ...
+Processing triggers for systemd (238-4) ...
+Processing triggers for man-db (2.8.3-2) ...
+Setting up openssh-server (1:7.9p1-10) ...
+
+Creating config file /etc/ssh/sshd_config with new version
+Creating SSH2 RSA key; this may take some time ...
+2048 SHA256:bthACLBJm5qnQpSxG+lTuscVTW3mW/8bbOprxjvB3Io root@DESKTOP-5QV72KT (RSA)
+Creating SSH2 ECDSA key; this may take some time ...
+256 SHA256:ClLWWUuDdOgvInRrgBkbKtCkpNm3kscg027Q1N2hegA root@DESKTOP-5QV72KT (ECDSA)
+Creating SSH2 ED25519 key; this may take some time ...
+256 SHA256:TFN5AxChcla0uozEBSEa5J+R5QaBkgAfkqoIiBALYsw root@DESKTOP-5QV72KT (ED25519)
+update-rc.d: As per Kali policy, ssh init script is left disabled.
+invoke-rc.d: could not determine current runlevel
+Processing triggers for systemd (238-4) ...
+
+star-delta@DESKTOP-5QV72KT:~$ sudo service ssh status
+[FAIL] sshd is not running ... failed!
+star-delta@DESKTOP-5QV72KT:~$ sudo service ssh start
+[ ok ] Starting OpenBSD Secure Shell server: sshd.
+
+Teraterm.ini
+TermType=xterm
+«
+TermType=xterm-256color
+

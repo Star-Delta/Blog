@@ -112,3 +112,14 @@ TermType=xterm
 «
 TermType=xterm-256color
 
+star-delta@DESKTOP-5QV72KT:~$ ls -al /etc/rc*.d/*ssh
+lrwxrwxrwx 1 root root 13 May 18 23:28 /etc/rc2.d/K01ssh -> ../init.d/ssh
+lrwxrwxrwx 1 root root 13 May 18 23:28 /etc/rc3.d/K01ssh -> ../init.d/ssh
+lrwxrwxrwx 1 root root 13 May 18 23:28 /etc/rc4.d/K01ssh -> ../init.d/ssh
+lrwxrwxrwx 1 root root 13 May 18 23:28 /etc/rc5.d/K01ssh -> ../init.d/ssh
+star-delta@DESKTOP-5QV72KT:~$ sudo update-rc.d ssh enable 2 3 4 5
+star-delta@DESKTOP-5QV72KT:~$ ls -al /etc/rc*.d/*ssh
+lrwxrwxrwx 1 root root 13 May 18 23:28 /etc/rc2.d/S01ssh -> ../init.d/ssh
+lrwxrwxrwx 1 root root 13 May 18 23:28 /etc/rc3.d/S01ssh -> ../init.d/ssh
+lrwxrwxrwx 1 root root 13 May 18 23:28 /etc/rc4.d/S01ssh -> ../init.d/ssh
+lrwxrwxrwx 1 root root 13 May 18 23:28 /etc/rc5.d/S01ssh -> ../init.d/ssh

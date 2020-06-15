@@ -1,1 +1,2 @@
-# Blog
+# なにこれ
+Star-Deltaのブログです。

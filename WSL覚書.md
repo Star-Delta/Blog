@@ -4,7 +4,7 @@
 
 ## asdf
 
-```powershell hoge.ps1 {.Line-Number .copy .scroll}
+```powershell hoge.ps1
 get-date 
 write-host -Object 'asdfasdfasdfasdfasdfassdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'
 ```

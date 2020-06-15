@@ -3,8 +3,10 @@
 ###### Update 
 
 ## asdf
-```powershell hoge.ps1 {.Line-number .copy .scroll}
+
+```powershell hoge.ps1 {.Line-Number .copy .scroll}
 get-date 
 write-host -Object 'asdfasdfasdfasdfasdfassdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'
 ```
+
 asdf

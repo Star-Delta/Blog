@@ -9,7 +9,7 @@
 - HW:Surface Pro3
 - OS:Kali Linux
 
-# 手順
+# やったこと
 何かやったら追記していく
 ## Windows側で行う下準備
 ### Windows Update
@@ -17,7 +17,7 @@
 ### WSLの有効化
 [設定]→[Windowsの機能]を検索→[Windows Subsystem for Linux]にチェックを入れる→再起動  
 →これをやっておかないとWSL起動時に以下のエラーが出る
-```bash
+```shell
 Installation Failed!
 Error: 0x8007019e
 Press any key to continue...
@@ -69,10 +69,10 @@ Reading package lists... Done
 Building dependency tree
 Reading state information... Done
 144 packages can be upgraded. Run 'apt list --upgradable' to see them.
-	</pre>
-	<br>
-	ついでにupgrade<br>
-	<pre class="prettyprint linenums lang-bsh">
+```
+
+ついでにupgrade
+```shell
 $ apt help
 ～省略～
 Most used commands:

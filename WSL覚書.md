@@ -11,7 +11,6 @@
 
 # 手順
 何かやったら追記していく
-
 ## Windows側で行う下準備
 ### Windows Update
 普段からやろうね
@@ -27,15 +26,15 @@ Press any key to continue...
 [Microsoft Store]→[kali linux]を検索→Install<br>
 
 ## OSのInstall他
-[Kali Linux]の起動
-```
+### [Kali Linux]の起動
+```shell
 Installing, this may take a few minutes...
 Please create a default UNIX user account. The username does not need to match your Windows username.
 For more information visit: https://aka.ms/wslusers
 Enter new UNIX username: Hoge
-adduser: Please enter a username matching the regular expression configured	#初期設定のネーミングルールに違反
-via the NAME_REGEX configuration variable.  Use the `--force-badname`		#ルールは変えられる模様
-option to relax this check or reconfigure NAME_REGEX.						#
+adduser: Please enter a username matching the regular expression configured #初期設定のネーミングルールに違反
+via the NAME_REGEX configuration variable.  Use the `--force-badname`       #ルールは変えられる模様
+option to relax this check or reconfigure NAME_REGEX.                       #
 Enter new UNIX username: hoge
 Enter new UNIX password:
 Retype new UNIX password:
@@ -43,8 +42,8 @@ passwd: password updated successfully
 Installation successful!
 ```
 
-aptのリポジトリが古いので更新
-```
+### aptのリポジトリが古いので更新
+```shell
 $ apt help
 ～省略～
 Most used commands:
@@ -53,13 +52,13 @@ Most used commands:
 ～省略～
 
 $ sudo apt update
-We trust you have received the usual lecture from the local System	#あなたはシステム管理者から通常の講習を受けたはずです。
+We trust you have received the usual lecture from the local System  #あなたはシステム管理者から通常の講習を受けたはずです。
 
-Administrator. It usually boils down to these three things:			#これは通常、以下の3点に要約されます:
+Administrator. It usually boils down to these three things:         #これは通常、以下の3点に要約されます:
 
-    #1) Respect the privacy of others.					#    #1) 他人のプライバシーを尊重すること。
-    #2) Think before you type.							#    #2) タイプする前に考えること。
-    #3) With great power comes great responsibility.	#    #3) 大いなる力には大いなる責任が伴うこと。
+    #1) Respect the privacy of others.                              #    #1) 他人のプライバシーを尊重すること。
+    #2) Think before you type.                                      #    #2) タイプする前に考えること。
+    #3) With great power comes great responsibility.                #    #3) 大いなる力には大いなる責任が伴うこと。
 
 Get:1 http://ftp.ne.jp/Linux/packages/kali/kali kali-rolling InRelease [30.5 kB]
 Get:2 http://ftp.ne.jp/Linux/packages/kali/kali kali-rolling/main amd64 Packages [17.2 MB]

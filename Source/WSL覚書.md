@@ -16,7 +16,7 @@
 普段からやろうね
 ### WSLの有効化
 [設定]→[Windowsの機能]を検索→[Windows Subsystem for Linux]にチェックを入れる→再起動  
-→これをやっておかないとWSL起動時に以下のエラーが出る
+- これをやっておかないとWSL起動時に以下のエラーが出る
 ```shell
 Installation Failed!
 Error: 0x8007019e

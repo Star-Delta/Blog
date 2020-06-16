@@ -1,5 +1,5 @@
 # WSL覚書
-###### Create 2020-06-16 01:34:32,Update 2020-06-16 11:05:17
+###### Create 2020-06-16 01:34:32
 この記事には、自分がWSLを触ってやったこと・ハマったことを書く。  
 基本的にLinuxなど含め初心者なので、めちゃくちゃなことを書いてると思う。  
 肥大化したらページの分割を考える。
@@ -87,3 +87,65 @@ $ sudo apt full-upgrade
 Running hooks in /etc/ca-certificates/update.d...
 done.
 ```
+
+## rootのパスワード変更
+Debian系のLinuxはsudoの利用を推奨しているらしい。
+でもそんなの関係ねぇって人は変更しましょう。
+`$ sudo password root`
+今回は、変更しないことに。
+
+## vimの準備
+viが古かったのでupgarade  
+full-upgradeで最新になってると思ったんやけどな…
+```shell
+$ sudo apt upgrade vim
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Calculating upgrade... Done
+The following packages were automatically installed and are no longer required:
+  libfreetype6 libglib2.0-0 libglib2.0-data libgraphite2-3 libharfbuzz0b libicu-le-hb0 libicu60 libpng16-16
+  shared-mime-info xdg-user-dirs
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  libgpm2 vim vim-runtime
+0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+Need to get 7,090 kB of archives.
+After this operation, 33.3 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://ftp-srv2.kddilabs.jp/Linux/packages/kali/kali kali-rolling/main amd64 libgpm2 amd64 1.20.7-5 [35.1 kB]
+Get:2 http://ftp-srv2.kddilabs.jp/Linux/packages/kali/kali kali-rolling/main amd64 vim-runtime all 2:8.1.0875-1 [5,77
+5 kB]
+Get:3 http://ftp-srv2.kddilabs.jp/Linux/packages/kali/kali kali-rolling/main amd64 vim amd64 2:8.1.0875-1 [1,280 kB]
+Fetched 7,090 kB in 1min 13s (97.1 kB/s)
+Selecting previously unselected package libgpm2:amd64.
+(Reading database ... 17510 files and directories currently installed.)
+Preparing to unpack .../libgpm2_1.20.7-5_amd64.deb ...
+Unpacking libgpm2:amd64 (1.20.7-5) ...
+Selecting previously unselected package vim-runtime.
+Preparing to unpack .../vim-runtime_2%3a8.1.0875-1_all.deb ...
+Adding 'diversion of /usr/share/vim/vim81/doc/help.txt to /usr/share/vim/vim81/doc/help.txt.vim-tiny by vim-runtime'
+Adding 'diversion of /usr/share/vim/vim81/doc/tags to /usr/share/vim/vim81/doc/tags.vim-tiny by vim-runtime'
+Unpacking vim-runtime (2:8.1.0875-1) ...
+Selecting previously unselected package vim.
+Preparing to unpack .../vim_2%3a8.1.0875-1_amd64.deb ...
+Unpacking vim (2:8.1.0875-1) ...
+Setting up libgpm2:amd64 (1.20.7-5) ...
+Processing triggers for libc-bin (2.28-2) ...
+Setting up vim-runtime (2:8.1.0875-1) ...
+Setting up vim (2:8.1.0875-1) ...
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vim (vim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vimdiff (vimdiff) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rvim (rvim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rview (rview) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vi (vi) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/view (view) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/ex (ex) in auto mode
+```
+
+.vimrcを作成。  
+```shell
+$ touch .vimrc
+```
+
+中身は[こんな感じ](https://github.com/Star-Delta/vimrc/blob/master/.vimrc)

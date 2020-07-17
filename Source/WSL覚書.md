@@ -14,6 +14,7 @@
 ## Windows側で行う下準備
 ### Windows Update
 普段からやろうね
+
 ### WSLの有効化
 [設定]→[Windowsの機能]を検索→[Windows Subsystem for Linux]にチェックを入れる→再起動  
 - これをやっておかないとWSL起動時に以下のエラーが出る
@@ -22,24 +23,28 @@ Installation Failed!
 Error: 0x8007019e
 Press any key to continue...
 ```
+
+## OSのInstall他
 ### Linuxのインストール
 [Microsoft Store]→[kali linux]を検索→Install<br>
 
-## OSのInstall他
 ### [Kali Linux]の起動
 ```shell
 Installing, this may take a few minutes...
 Please create a default UNIX user account. The username does not need to match your Windows username.
 For more information visit: https://aka.ms/wslusers
-Enter new UNIX username: Hoge
-adduser: Please enter a username matching the regular expression configured #初期設定のネーミングルールに違反
-via the NAME_REGEX configuration variable.  Use the `--force-badname`       #ルールは変えられる模様
-option to relax this check or reconfigure NAME_REGEX.                       #
 Enter new UNIX username: hoge
 Enter new UNIX password:
 Retype new UNIX password:
 passwd: password updated successfully
 Installation successful!
+```
+初期ネーミングルールに違反すると以下のエラーが出る。
+```shell
+Enter new UNIX username: Hoge
+option to relax this check or reconfigure NAME_REGEX.
+adduser: Please enter a username matching the regular expression configured 
+via the NAME_REGEX configuration variable.  Use the `--force-badname`      
 ```
 
 ### aptのリポジトリが古いので更新
@@ -71,32 +76,14 @@ Reading state information... Done
 144 packages can be upgraded. Run 'apt list --upgradable' to see them.
 ```
 
-ついでにupgrade
-```shell
-$ apt help
-～省略～
-Most used commands:
-～省略～
-  upgrade - upgrade the system by installing/upgrading packages
-  full-upgrade - upgrade the system by removing/installing/upgrading packages
-～省略～
-
-$ sudo apt full-upgrade
-～省略～
-0 added, 0 removed; done.
-Running hooks in /etc/ca-certificates/update.d...
-done.
-```
-
 ## rootのパスワード変更
-Debian系のLinuxはsudoの利用を推奨しているらしい。
-でもそんなの関係ねぇって人は変更しましょう。
-`$ sudo password root`
+Debian系のLinuxはsudoの利用を推奨しているらしい。  
+でもそんなの関係ねぇって人は変更しましょう。  
+`$ sudo password root`  
 今回は、変更しないことに。
 
 ## vimの準備
 viが古かったのでupgarade  
-full-upgradeで最新になってると思ったんやけどな…
 ```shell
 $ sudo apt upgrade vim
 Reading package lists... Done
